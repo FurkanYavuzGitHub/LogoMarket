@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Ziyaretci.master.cs" Inherits="Ziyaretci" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="css/Proje.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="height: 763px">
+    <form id="form1" runat="server">
+<div class="Logo"><a href="index.aspx"><img src="img/logo.png" width="250" height="250" /></a></div>
+<hr align="center" width="400" />
+<div class="Yazi">LOGO MARKET</div>
+<hr align="center" width="400" />
+<div class="Menu" align="left">
+  <ul>
+
+  <asp:Table ID="Table2" runat="server" Height="16px" Width="130px" 
+          HorizontalAlign="Left">
+          <asp:TableRow ID="TableRow1" runat="server">
+              <asp:TableCell ID="TableCell1" runat="server">
+              <li><a href="logolar.aspx">LOGOLAR</a></li></asp:TableCell>
+              <asp:TableCell ID="TableCell2" runat="server">
+              <li><a href="teklifler.aspx">TEKLİFLER</a></li></asp:TableCell>
+              <asp:TableCell ID="TableCell3" runat="server">
+              <li><a href="uyeler.aspx">ÜYELER</a></li></asp:TableCell>
+          </asp:TableRow>
+          </asp:Table>
+      <asp:ContentPlaceHolder ID="Profilayar" runat="server">
+          <asp:Table ID="profilayartable" runat="server" Height="16px" Width="339px" 
+          HorizontalAlign="Left" Visible="False">
+              <asp:TableRow runat="server">
+                  <asp:TableCell runat="server"><li><a href="#">AYARLAR</a></li></asp:TableCell>
+                  <asp:TableCell runat="server">
+                  <asp:ImageButton ID="profilcikis" runat="server" ImageUrl="~/img/profilcikis.png"/></asp:TableCell>
+                  <asp:TableCell ID="TableCell4" runat="server">
+                  <a href="logoolustur.aspx"><asp:ImageButton ID="logoolustur" runat="server" ImageUrl="~/img/logoolustur.png" PostBackUrl="~/logoolustur.aspx"/></a></asp:TableCell>
+                  <asp:TableCell ID="TableCell5" runat="server">
+                  <a href="teklifolustur.aspx"><asp:ImageButton ID="teklifolustur" runat="server" ImageUrl="~/img/teklifolustur.png" PostBackUrl="~/teklifolustur.aspx" /></a></asp:TableCell>
+              </asp:TableRow>
+          </asp:Table>
+        </asp:ContentPlaceHolder>
+    </ul>
+  </div>
+    <asp:ContentPlaceHolder ID="icerik" runat="server">
+        <p>
+            &nbsp;</p>
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
